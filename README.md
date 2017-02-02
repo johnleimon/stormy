@@ -49,7 +49,7 @@ Example Capture:
     2.900176625,1
     2.90017975,0
 
-./stormy capture.csv
+./stormy -v capture.csv
 
     +delta:  1648912.624999866239 us 0
     +delta:  1250000.000000000000 us 1
