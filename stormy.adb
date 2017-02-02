@@ -156,13 +156,13 @@ procedure Stormy is
                  if this - last > 0.000_005 then
                     -- bit is ZERO --
                     byte_buffer_bits(bit_index) := False;
-                    if verbose = true then
+                    if verbose then
                       put(" ... 0");
                     end if;
                  else
                     -- bit is ONE --
                     byte_buffer_bits(bit_index) := True;
-                    if verbose = true then
+                    if verbose then
                       put(" ... 1");
                     end if;
                  end if;
@@ -228,7 +228,7 @@ begin
       else
         this := get_timestamp(line);
        
-        if verbose = true then
+        if verbose then
           put("+delta: "); 
           X_IO.put((this - last) * 1_000_000);
           put(" us");
@@ -238,7 +238,7 @@ begin
         new_symbol := event_decode(get_state(line));
         
         if new_symbol.t = NewSequence then
-          if verbose = true then
+          if verbose then
             put(" [NewSequence]");
           else
             new_line;
@@ -246,14 +246,14 @@ begin
         end if;
         
         if new_symbol.t = ByteSymbol then
-          if verbose = true then
+          if verbose then
             put(" [Byte: " & to_hex_string(new_symbol.value) & "]");
           else
             put(to_hex_string(new_symbol.value) & " ");
           end if;
         end if;
        
-        if verbose = true then
+        if verbose then
           new_line;
         end if;
         
