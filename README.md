@@ -11,6 +11,9 @@ Bits interpreted as follows:
   
 Host sends command (one hex byte, even), Device sends response which is the host command incremented by one. All other bytes are data and sometimes CRC.
 
+![Bit Timing]
+(https://github.com/evilspacepirate/stormy/raw/2a99bbb7a7155c6f9db24e1248031aea85692582/doc/bit_timing.jpg)
+
 ##Decoder Input Data Format
 
 CSV File with first row being the time (in seconds) of the Apple Watch pin 4 transition. The second row is the state of the pin.
@@ -46,7 +49,7 @@ Example Capture:
     2.900176625,1
     2.90017975,0
 
-./stormy capture.csv
+./stormy -v capture.csv
 
     +delta:  1648912.624999866239 us 0
     +delta:  1250000.000000000000 us 1
