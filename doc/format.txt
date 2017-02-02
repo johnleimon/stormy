@@ -1,0 +1,9 @@
+- Byte framing is 12us.
+
+- Order is LSB first.
+
+- Bits interpreted as follows:
+
+[file:bit_timing.jpg]
+
+- Host sends command (one hex byte, even), Device sends response which is the host command incremented by one.  All other bytes are data and sometimes CRC.
