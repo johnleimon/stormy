@@ -11,6 +11,9 @@ Bits interpreted as follows:
   
 Host sends command (one hex byte, even), Device sends response which is the host command incremented by one. All other bytes are data and sometimes CRC.
 
+![Bit Timing]
+(https://github.com/evilspacepirate/stormy/raw/2a99bbb7a7155c6f9db24e1248031aea85692582/doc/bit_timing.jpg)
+
 ##Decoder Input Data Format
 
 CSV File with first row being the time (in seconds) of the Apple Watch pin 4 transition. The second row is the state of the pin.
